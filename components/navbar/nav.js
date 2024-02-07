@@ -6,7 +6,8 @@ import { User } from "../icons/user";
 import { WishList } from "../icons/wishList";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../logo/logo.jpg";
+import logo from "../images/logo.jpg";
+import tractor from "../images/tractor.jpeg"
 // import { Home } from "../icons/home";
 // import { Categories } from "../icons/categories";
 // import { TopBrands } from "../icons/topBrands";
@@ -16,10 +17,10 @@ export default function Nav() {
   const activeLink = inactiveLink + "bg-[#720C1A] rounded-md";
 
   return (
-    <div className="bg-[#72B462]  w-screen flex flex-col">
-      <div className="flex gap-2 items-center justify-center text-white">
-        <Link href={"/"} className=" pb-3 pr-10 mix-blend-darken	 ">
-          <Image src={logo} width="auto" height="55" alt="Logo" />
+    <div className="bg-[#72B462]  w-screen  flex flex-col">
+      <div className="flex gap-2 items-center  justify-center text-white">
+        <Link href={"/"} className="  pr-10 mix-blend-darken	 ">
+          <Image src={tractor} width="auto" height="60" alt="Logo" />
         </Link>
         <div className="border-2 h-8 w-96 rounded-md ">
           <div className="ml-2 mr-2 mt-0.5 gap-2 flex text-white items-center">
@@ -58,16 +59,16 @@ export default function Nav() {
           <Icon icon={ArrowDown} />
         </Link>
 
-        <Link href={"/"} className={inactiveLink}>
+        <Link href={"/topBrands"} className={inactiveLink}>
           {/* <Icon  icon={TopBrands} size="lessSmall"/> */}
           Top Brands
           <Icon icon={ArrowDown} />
         </Link>
 
-        <Link href={"/"} className={inactiveLink}>
+        <Link href={"/about"} className={inactiveLink}>
           About
         </Link>
-        <Link href={"/"} className={inactiveLink}>
+        <Link href={"/contact"} className={inactiveLink}>
           Contact Us
         </Link>
       </div>
