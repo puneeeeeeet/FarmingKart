@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../images/logo.jpg";
 import tractor from "../images/tractor.jpeg"
+import { UserButton } from "@clerk/nextjs";
 // import { Home } from "../icons/home";
 // import { Categories } from "../icons/categories";
 // import { TopBrands } from "../icons/topBrands";
@@ -27,7 +28,7 @@ export default function Nav() {
             <input
               className="bg-transparent w-full"
               placeholder="Search youur product here!"
-            />
+            ></input>
             <button>
               <Icon icon={Search} size="lessSmall" />
             </button>
@@ -39,30 +40,30 @@ export default function Nav() {
         <button className="ml-2">
           <Icon icon={Kart} size="large" />
         </button>
-        <div className="flex gap-2 ml-5">
+        <div className="flex items-center gap-2 ml-5">
           <div>User</div>
           <div>
-            <Icon icon={User} />
+          <UserButton  afterSignOutUrl="/"></UserButton>
           </div>
         </div>
       </div>
 
       <div className="w-screen bg-[#549744] h-10 flex justify-center	font-bold items-center gap-6 text-white">
-        <Link href={"/"} className={inactiveLink}>
+        <Link href={"/"} className={activeLink}>
           {/* <Icon icon={Home} size="extraSmall" color="white" /> */}
           Home
         </Link>
 
-        <Link href={"/categories"} className={activeLink}>
+        <Link href={"/categories"} className={inactiveLink}>
           {/* <Icon icon={Categories} size="lessSmall" /> */}
           Categories
-          <Icon icon={ArrowDown} />
+          <Icon icon={ArrowDown} size="medium"/>
         </Link>
 
         <Link href={"/topBrands"} className={inactiveLink}>
           {/* <Icon  icon={TopBrands} size="lessSmall"/> */}
           Top Brands
-          <Icon icon={ArrowDown} />
+          <Icon icon={ArrowDown} size="medium" />
         </Link>
 
         <Link href={"/about"} className={inactiveLink}>
