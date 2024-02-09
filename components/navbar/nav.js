@@ -6,7 +6,6 @@ import { User } from "../icons/user";
 import { WishList } from "../icons/wishList";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../images/logo.jpg";
 import tractor from "../images/tractor.jpeg"
 import { UserButton } from "@clerk/nextjs";
 // import { Home } from "../icons/home";
@@ -76,3 +75,15 @@ export default function Nav() {
     </div>
   );
 }
+
+
+// GOOGLE_ID="412832476395-05h5ocif0pdlj1bjducu52s12ar2pdlj.apps.googleusercontent.com"
+// GOOGLE_SECRET="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"
+
+// NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZGFyaW5nLXRlcm1pdGUtMTMuY2xlcmsuYWNjb3VudHMuZGV2JA
+// CLERK_SECRET_KEY=sk_test_kBbmO3ICgX1rWOP0ZJlklvdSMCC6BOEJTbAtnIbug5
+
+// NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+// NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+// NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+// NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
