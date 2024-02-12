@@ -6,18 +6,23 @@ import { User } from "../icons/user";
 import { WishList } from "../icons/wishList";
 import Link from "next/link";
 import Image from "next/image";
-import tractor from "../images/tractor.jpeg"
-import { UserButton } from "@clerk/nextjs";
+import tractor from "../images/tractor.jpeg";
+import { signOut,useSession } from "next-auth/react";
+// import { UserButton } from "@clerk/nextjs";
 // import { Home } from "../icons/home";
 // import { Categories } from "../icons/categories";
 // import { TopBrands } from "../icons/topBrands";
 
 export default function Nav() {
+  const { data: session } = useSession()
+  const src = `${session.user.image}`;
+
+
   const inactiveLink = "flex justify-center items-center p-2 ";
   const activeLink = inactiveLink + "bg-[#720C1A] rounded-md";
 
   return (
-    <div className="bg-[#72B462]  w-screen  flex flex-col">
+    <div className="bg-[#72B462]    flex flex-col">
       <div className="flex gap-2 items-center  justify-center text-white">
         <Link href={"/"} className="  pr-10 mix-blend-darken	 ">
           <Image src={tractor} width="auto" height="60" alt="Logo" />
@@ -40,14 +45,17 @@ export default function Nav() {
           <Icon icon={Kart} size="large" />
         </button>
         <div className="flex items-center gap-2 ml-5">
-          <div>User</div>
+          <div>{session.user.name}</div>
           <div>
-          <UserButton  afterSignOutUrl="/"></UserButton>
+            <button onClick={() => signOut()}>
+              <Image className="rounded-full mt-2" loader={() => src} src={src} width={30} height={30}></Image>
+              </button>
+            {/* <UserButton  afterSignOutUrl="/"></UserButton> */}
           </div>
         </div>
       </div>
 
-      <div className="w-screen bg-[#549744] h-10 flex justify-center	font-bold items-center gap-6 text-white">
+      <div className=" bg-[#549744] h-10 flex justify-center	font-bold items-center gap-6 text-white">
         <Link href={"/"} className={activeLink}>
           {/* <Icon icon={Home} size="extraSmall" color="white" /> */}
           Home
@@ -56,7 +64,7 @@ export default function Nav() {
         <Link href={"/categories"} className={inactiveLink}>
           {/* <Icon icon={Categories} size="lessSmall" /> */}
           Categories
-          <Icon icon={ArrowDown} size="medium"/>
+          <Icon icon={ArrowDown} size="medium" />
         </Link>
 
         <Link href={"/topBrands"} className={inactiveLink}>
@@ -64,7 +72,6 @@ export default function Nav() {
           Top Brands
           <Icon icon={ArrowDown} size="medium" />
         </Link>
-
         <Link href={"/about"} className={inactiveLink}>
           About
         </Link>
@@ -75,7 +82,6 @@ export default function Nav() {
     </div>
   );
 }
-
 
 // GOOGLE_ID="412832476395-05h5ocif0pdlj1bjducu52s12ar2pdlj.apps.googleusercontent.com"
 // GOOGLE_SECRET="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"
