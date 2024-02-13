@@ -2,22 +2,15 @@ import { Icon } from "../icon";
 import { ArrowDown } from "../icons/arrowDown";
 import { Kart } from "../icons/kart";
 import { Search } from "../icons/search";
-import { User } from "../icons/user";
 import { WishList } from "../icons/wishList";
 import Link from "next/link";
 import Image from "next/image";
 import tractor from "../images/tractor.jpeg";
-import { signOut,useSession } from "next-auth/react";
-// import { UserButton } from "@clerk/nextjs";
-// import { Home } from "../icons/home";
-// import { Categories } from "../icons/categories";
-// import { TopBrands } from "../icons/topBrands";
+import { signOut, useSession } from "next-auth/react";
+// import { UserButton } from "@clerk/nextjs"; // import { Home } from "../icons/home";// import { Categories } from "../icons/categories";// import { TopBrands } from "../icons/topBrands";
 
 export default function Nav() {
-  const { data: session } = useSession()
-  const src = `${session.user.image}`;
-
-
+  const { data: session } = useSession();
   const inactiveLink = "flex justify-center items-center p-2 ";
   const activeLink = inactiveLink + "bg-[#720C1A] rounded-md";
 
@@ -48,8 +41,13 @@ export default function Nav() {
           <div>{session.user.name}</div>
           <div>
             <button onClick={() => signOut()}>
-              <Image className="rounded-full mt-2" loader={() => src} src={src} width={30} height={30}></Image>
-              </button>
+              <Image
+                className="rounded-full mt-2"
+                src={session.user.image}
+                width={30}
+                height={30}
+              ></Image>
+            </button>
             {/* <UserButton  afterSignOutUrl="/"></UserButton> */}
           </div>
         </div>
@@ -72,7 +70,7 @@ export default function Nav() {
           Top Brands
           <Icon icon={ArrowDown} size="medium" />
         </Link>
-        <Link href={"/about"} className={inactiveLink}>
+        <Link href={"/"} className={inactiveLink}>
           About
         </Link>
         <Link href={"/contact"} className={inactiveLink}>
@@ -82,14 +80,3 @@ export default function Nav() {
     </div>
   );
 }
-
-// GOOGLE_ID="412832476395-05h5ocif0pdlj1bjducu52s12ar2pdlj.apps.googleusercontent.com"
-// GOOGLE_SECRET="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"
-
-// NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZGFyaW5nLXRlcm1pdGUtMTMuY2xlcmsuYWNjb3VudHMuZGV2JA
-// CLERK_SECRET_KEY=sk_test_kBbmO3ICgX1rWOP0ZJlklvdSMCC6BOEJTbAtnIbug5
-
-// NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-// NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-// NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-// NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
