@@ -1,3 +1,4 @@
+'use client'
 import { Icon } from "../icon";
 import { ArrowDown } from "../icons/arrowDown";
 import { Kart } from "../icons/kart";

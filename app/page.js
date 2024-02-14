@@ -14,19 +14,10 @@ export default function Home() {
   }
   return (
     <div className="bg-white  min-h-screen">
-      <Nav></Nav>
+      {/* <Nav></Nav> */}
       <TopBrands />
       <Categories></Categories>
     </div>
   );
 }
 
-// {
-//   return (
-//     <div className="bg-white  min-h-screen">
-//       <Nav></Nav>
-//       <TopBrands />
-//       {/* <Categories></Categories> */}
-//     </div>
-//   );
-// }
