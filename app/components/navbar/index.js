@@ -6,18 +6,15 @@ import { Search } from "../icons/search";
 import { WishList } from "../icons/wishList";
 import Link from "next/link";
 import Image from "next/image";
-import tractor from "../images/tractor.jpeg";
+import tractor from "../../(pages)/assets/images/tractor.jpeg";
 import { signOut, useSession } from "next-auth/react";
-import { useRouter } from "next/router";
-
-// import { UserButton } from "@clerk/nextjs"; // import { Home } from "../icons/home";// import { Categories } from "../icons/categories";// import { TopBrands } from "../icons/topBrands";
+import { usePathname } from "next/navigation";
 
 export default function Nav() {
   const { data: session } = useSession();
   const inactiveLink = "flex justify-center items-center p-2 ";
   const activeLink = inactiveLink + "bg-[#720C1A] rounded-md";
-  const router = useRouter();
-  const {pathname} = router;
+  const pathname = usePathname();
 
   return (
     <div className="bg-[#72B462]    flex flex-col">
@@ -59,26 +56,23 @@ export default function Nav() {
       </div>
 
       <div className=" bg-[#549744] h-10 flex justify-center	font-bold items-center gap-6 text-white">
-        <Link href={"/Home"} className={pathname.includes('/Home') ? activeLink : inactiveLink}>
-          {/* <Icon icon={Home} size="extraSmall" color="white" /> */}
+        <Link href={"/Home"} className={pathname == ("/") ? activeLink : inactiveLink}>
           Home
         </Link>
 
-        <Link href={"/Categories"} className={pathname.includes('/Categories') ? activeLink : inactiveLink}>
-          {/* <Icon icon={Categories} size="lessSmall" /> */}
+        <Link href={"/Categories"} className={pathname == ("/Categories") ? activeLink : inactiveLink}>
           Categories
           <Icon icon={ArrowDown} size="medium" />
         </Link>
 
-        <Link href={"/TopBrands"} className={pathname.includes('/TopBrands') ? activeLink : inactiveLink}>
-          {/* <Icon  icon={TopBrands} size="lessSmall"/> */}
+        <Link href={"/TopBrands"} className={pathname == ("/TopBrands") ? activeLink : inactiveLink}>
           Top Brands
           <Icon icon={ArrowDown} size="medium" />
         </Link>
-        <Link href={"/About"} className={pathname.includes('/About') ? activeLink : inactiveLink}>
+        <Link href={"/About"} className={pathname == ("/About") ? activeLink : inactiveLink}>
           About
         </Link>
-        <Link href={"/ContactUs"} className={pathname.includes('/ContactUs') ? activeLink : inactiveLink}>
+        <Link href={"/ContactUs"} className={pathname == ("/ContactUs") ? activeLink : inactiveLink}>
           Contact Us
         </Link>
       </div>

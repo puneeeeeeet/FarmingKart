@@ -1,8 +1,6 @@
 "use client";
-import Nav from "../components/navbar";
-import Categories from "../components/categories";
-import TopBrands from "../components/dashBoard";
-import Login from '../components/login'
+import Nav from "./components/navbar";
+import Login from './components/login'
 import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function Home() {
@@ -15,8 +13,8 @@ export default function Home() {
   return (
     <div className="bg-white  min-h-screen">
       <Nav></Nav>
-      <TopBrands />
-      <Categories></Categories>
+      {/* <TopBrands />
+      <Categories></Categories> */}
     </div>
   );
 }
