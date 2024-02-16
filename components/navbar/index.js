@@ -8,12 +8,16 @@ import Link from "next/link";
 import Image from "next/image";
 import tractor from "../images/tractor.jpeg";
 import { signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+
 // import { UserButton } from "@clerk/nextjs"; // import { Home } from "../icons/home";// import { Categories } from "../icons/categories";// import { TopBrands } from "../icons/topBrands";
 
 export default function Nav() {
   const { data: session } = useSession();
   const inactiveLink = "flex justify-center items-center p-2 ";
   const activeLink = inactiveLink + "bg-[#720C1A] rounded-md";
+  const router = useRouter();
+  const {pathname} = router;
 
   return (
     <div className="bg-[#72B462]    flex flex-col">
@@ -55,26 +59,26 @@ export default function Nav() {
       </div>
 
       <div className=" bg-[#549744] h-10 flex justify-center	font-bold items-center gap-6 text-white">
-        <Link href={"/"} className={activeLink}>
+        <Link href={"/Home"} className={pathname.includes('/Home') ? activeLink : inactiveLink}>
           {/* <Icon icon={Home} size="extraSmall" color="white" /> */}
           Home
         </Link>
 
-        <Link href={"/categories"} className={inactiveLink}>
+        <Link href={"/Categories"} className={pathname.includes('/Categories') ? activeLink : inactiveLink}>
           {/* <Icon icon={Categories} size="lessSmall" /> */}
           Categories
           <Icon icon={ArrowDown} size="medium" />
         </Link>
 
-        <Link href={"/topBrands"} className={inactiveLink}>
+        <Link href={"/TopBrands"} className={pathname.includes('/TopBrands') ? activeLink : inactiveLink}>
           {/* <Icon  icon={TopBrands} size="lessSmall"/> */}
           Top Brands
           <Icon icon={ArrowDown} size="medium" />
         </Link>
-        <Link href={"/"} className={inactiveLink}>
+        <Link href={"/About"} className={pathname.includes('/About') ? activeLink : inactiveLink}>
           About
         </Link>
-        <Link href={"/contact"} className={inactiveLink}>
+        <Link href={"/ContactUs"} className={pathname.includes('/ContactUs') ? activeLink : inactiveLink}>
           Contact Us
         </Link>
       </div>
