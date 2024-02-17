@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Icon } from "../icon";
 import { ArrowDown } from "../icons/arrowDown";
 import { Kart } from "../icons/kart";
@@ -56,23 +56,38 @@ export default function Nav() {
       </div>
 
       <div className=" bg-[#549744] h-10 flex justify-center	font-bold items-center gap-6 text-white">
-        <Link href={"/Home"} className={pathname == ("/") ? activeLink : inactiveLink}>
+        <Link
+          href={"/Home"}
+          className={pathname == "/Home" ? activeLink : inactiveLink}
+        >
           Home
         </Link>
 
-        <Link href={"/Categories"} className={pathname == ("/Categories") ? activeLink : inactiveLink}>
+        <Link
+          href={"/Categories"}
+          className={pathname == "/Categories" ? activeLink : inactiveLink}
+        >
           Categories
           <Icon icon={ArrowDown} size="medium" />
         </Link>
 
-        <Link href={"/TopBrands"} className={pathname == ("/TopBrands") ? activeLink : inactiveLink}>
+        <Link
+          href={"/TopBrands"}
+          className={pathname == "/TopBrands" ? activeLink : inactiveLink}
+        >
           Top Brands
           <Icon icon={ArrowDown} size="medium" />
         </Link>
-        <Link href={"/About"} className={pathname == ("/About") ? activeLink : inactiveLink}>
+        <Link
+          href={"/Products"}
+          className={pathname == "/Products" ? activeLink : inactiveLink}
+        >
           About
         </Link>
-        <Link href={"/ContactUs"} className={pathname == ("/ContactUs") ? activeLink : inactiveLink}>
+        <Link
+          href={"/ContactUs"}
+          className={pathname == "/ContactUs" ? activeLink : inactiveLink}
+        >
           Contact Us
         </Link>
       </div>
