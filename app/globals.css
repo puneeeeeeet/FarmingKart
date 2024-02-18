@@ -2,4 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+input, textarea{
+    @apply border-2 border-[#549744] rounded-md px-1 w-full;
+    @apply mb-2;
+}
 
+input:focus, textarea:focus{
+    @apply border-red-900;
+}
+
+.btn-primary{
+    @apply bg-[#549744] text-white py-1 rounded-md
+}

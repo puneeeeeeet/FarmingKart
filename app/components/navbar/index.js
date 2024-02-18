@@ -22,14 +22,14 @@ export default function Nav() {
         <Link href={"/"} className="  pr-10 mix-blend-darken	 ">
           <Image src={tractor} width="auto" height="60" alt="Logo" />
         </Link>
-        <div className="border-2 h-8 w-96 rounded-md ">
-          <div className="ml-2 mr-2 mt-0.5 gap-2 flex text-white items-center">
+        <div className="h-8 w-96 rounded-md ">
+          <div className="ml-2 mr-2 mt-0.5 gap-2 flex text-white items-center justify-center">
             <input
-              className="bg-transparent w-full"
-              placeholder="Search youur product here!"
+              className="bg-transparent w-full border-gray-300"
+              placeholder="Search your product here!"
             ></input>
-            <button>
-              <Icon icon={Search} size="lessSmall" />
+            <button className=" mb-2">
+              <Icon icon={Search} size="small" />
             </button>
           </div>
         </div>
