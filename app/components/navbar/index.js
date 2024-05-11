@@ -33,12 +33,12 @@ export default function Nav() {
             </button>
           </div>
         </div>
-        <button className=" ml-5">
+        {/* <button className=" ml-5">
           <Icon icon={WishList} size="medium" />
-        </button>
-        <button className="ml-2">
+        </button> */}
+        {/* <button className="ml-2">
           <Icon icon={Kart} size="large" />
-        </button>
+        </button> */}
         <div className="flex items-center gap-2 ml-5">
           <div>{session.user.name}</div>
           <div>
@@ -71,13 +71,13 @@ export default function Nav() {
           <Icon icon={ArrowDown} size="medium" />
         </Link>
 
-        <Link
+        {/* <Link
           href={"/TopBrands"}
           className={pathname == "/TopBrands" ? activeLink : inactiveLink}
         >
           Top Brands
           <Icon icon={ArrowDown} size="medium" />
-        </Link>
+        </Link> */}
         <Link
           href={"/Products"}
           className={pathname == "/Products" ? activeLink : inactiveLink}

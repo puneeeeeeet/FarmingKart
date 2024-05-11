@@ -16,7 +16,7 @@ export default function Categories() {
       <div className="bg-[#F4E5E5] h-fit w-fit mt-4 rounded-lg">
         <div className="m-3 ">
           <div className="flex gap-3 ">
-            <Link href="/" className="bg-[#D2D7F1] w-full h-64 rounded-lg">
+            <Link href="/Herbicides" className="bg-[#D2D7F1] w-full h-64 rounded-lg">
               <div className=" w-full justify-end items-end flex px-10 py-3 text-2xl">
                 HERBICIDE
               </div>
