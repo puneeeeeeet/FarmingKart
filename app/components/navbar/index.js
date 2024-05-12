@@ -1,17 +1,15 @@
 "use client";
 import { Icon } from "../icon";
 import { ArrowDown } from "../icons/arrowDown";
-import { Kart } from "../icons/kart";
 import { Search } from "../icons/search";
-import { WishList } from "../icons/wishList";
 import Link from "next/link";
 import Image from "next/image";
 import tractor from "../../(pages)/assets/images/tractor.jpeg";
-import { signOut, useSession } from "next-auth/react";
+// import { signOut, useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
 
 export default function Nav() {
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
   const inactiveLink = "flex justify-center items-center p-2 ";
   const activeLink = inactiveLink + "bg-[#720C1A] rounded-md";
   const pathname = usePathname();
@@ -40,17 +38,8 @@ export default function Nav() {
           <Icon icon={Kart} size="large" />
         </button> */}
         <div className="flex items-center gap-2 ml-5">
-          <div>{session.user.name}</div>
+          
           <div>
-            <button onClick={() => signOut()}>
-              <Image
-                className="rounded-full mt-2"
-                src={session.user.image}
-                width={30}
-                height={30}
-              ></Image>
-            </button>
-            {/* <UserButton  afterSignOutUrl="/"></UserButton> */}
           </div>
         </div>
       </div>
