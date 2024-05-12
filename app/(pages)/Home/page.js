@@ -1,5 +1,6 @@
 import farmer from "../assets/images/farmer3.jpg"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TopBrands() {
   return (
@@ -12,13 +13,13 @@ export default function TopBrands() {
         <div className="text-xl">
             –Jawaharlal Nehru.
         </div>
-        <div className="gap-3 flex">
-            <button className="bg-[#FFB72C] w-28 rounded-lg text-white text-xl mt-10">
+        <div className="gap-3 flex mt-10  text-white text-xl">
+            <Link href='/Categories' className="bg-[#FFB72C] w-28 flex rounded-lg items-center justify-center">
             Explore
-        </button>
-        <button className="bg-[#72B462] w-36 rounded-lg text-white text-xl mt-10">
+        </Link>
+        <Link href='/ContactUs' className="bg-[#72B462] w-36 rounded-lg flex items-center justify-center">
             Contact Us
-        </button>
+        </Link>
 
         </div>
         
