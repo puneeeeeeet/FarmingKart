@@ -25,18 +25,15 @@ export default function Herbicides() {
     }
     fetchData();
   }, []);
-  // const myLoader=({src})=>{
-  //     return ``;
-  //   }
+ 
 
   return (
     <div>
       <div className=" mt-3 items-center justify-center grid grid-cols-7 gap-2 ">
         {productData.map((product) => (
-          <div
-            key={product.id}
-            className=" flex flex-col items-center p-2 bg-gray-100 justify-center w-52 rounded-sm"
-          >
+
+          
+          <div key={product.id} className=" flex flex-col items-center p-2 bg-gray-100 justify-center w-52 rounded-sm">
             <div className="w-full mx-2 h-40 bg-white">
               <Image
                 className="w-full h-full rounded-sm"
@@ -46,9 +43,7 @@ export default function Herbicides() {
               ></Image>
             </div>
             <p className="text-xl">{product.name}</p>
-
             <p className="font-bold">{product.category}</p>
-            {/* <div className='inline-flex justify-between items-center w-full  '> */}
             <p className="font-medium ">₹{product.price}</p>
             <Link
               href="https://www.linkedin.com/in/puneet-chhabra-3089b621b/"
@@ -56,9 +51,6 @@ export default function Herbicides() {
             >
               Add to cart
             </Link>
-            {/* </div> */}
-
-            {/* <p>{product.description}</p> */}
           </div>
         ))}
       </div>
