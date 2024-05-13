@@ -26,15 +26,20 @@ export default function Herbicides() {
     fetchData();
   }, []);
  
+  const [showModal,setShowModal] = useState(false);
 
   return (
     <div>
-      <div className=" mt-3 items-center justify-center grid grid-cols-7 gap-2 ">
+      <div className=" mt-3  grid grid-cols-2 sm:grid-cols-7 gap-2 ">
         {productData.map((product) => (
 
           
-          <div key={product.id} className=" flex flex-col items-center p-2 bg-gray-100 justify-center w-52 rounded-sm">
-            <div className="w-full mx-2 h-40 bg-white">
+          <div 
+          key={product.id} 
+          className=" flex ml-1 flex-col items-center p-2 relative z-0 bg-gray-100 justify-center w-44 sm:w-52 rounded-sm" 
+          onClick={()=> setShowModal(true)}
+          >
+            <div className="w-full mx-2 h-36 bg-white">
               <Image
                 className="w-full h-full rounded-sm"
                 src={product.coverImage}
@@ -42,17 +47,36 @@ export default function Herbicides() {
                 height={900}
               ></Image>
             </div>
-            <p className="text-xl">{product.name}</p>
+            <div className="flex flex-col items-center justify-center">
+              <p className="sm:text-xl">{product.name}</p>
             <p className="font-bold">{product.category}</p>
+            
+            </div>
+            <div className="flex gap-2 ">
             <p className="font-medium ">₹{product.price}</p>
-            <Link
-              href="https://www.linkedin.com/in/puneet-chhabra-3089b621b/"
+            <button
+              // href="https://www.linkedin.com/in/puneet-chhabra-3089b621b/"
               className="bg-[#fbbf24] px-1 rounded-md"
             >
               Add to cart
-            </Link>
+            </button>
+            </div>
           </div>
         ))}
+        {showModal ?(
+          // [#72B462]
+            <div onClick={()=> setShowModal(false)} className="fixed inset-0 bg-opacity-25 backdrop-blur-sm flex justify-center items-center ">
+                <div className="w-64 h-32 rounded-md bg-gray-200 flex flex-col items-center justify-center">
+                   <div className="text-xl font-semibold px-2 " >
+                 Download the App from playstore!
+                  </div> 
+                  <Link href={"/"} 
+                  className="bg-[#fbbf24] px-2 text-black text-xl rounded-md">
+                  Download
+                  </Link>
+                  </div>
+            </div>
+          ): null}
       </div>
     </div>
   );

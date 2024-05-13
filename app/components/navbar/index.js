@@ -37,10 +37,10 @@ export default function Nav() {
         </div>
       </div>
 
-      <div className=" bg-[#549744] h-10 flex justify-center	font-bold items-center gap-1 text-white">
+      <div className=" bg-[#549744] h-10 flex justify-center	font-bold items-center gap-1 sm:gap-10 text-white">
         <Link
-          href={"/Home"}
-          className={pathname == "/Home" ? activeLink : inactiveLink}
+          href={"/"}
+          className={pathname == "/" ? activeLink : inactiveLink}
         >
           Home
         </Link>

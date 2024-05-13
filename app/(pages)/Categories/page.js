@@ -16,7 +16,10 @@ export default function Categories() {
       <div className="bg-[#F4E5E5] h-full w-full sm:w-fit sm:h-fit mt-4 rounded-lg">
         <div className="m-3 ">
           <div className="flex gap-3 ">
-            <Link href="/Herbicides" className="bg-[#D2D7F1] w-44 h-56 sm:w-full sm:h-64 rounded-lg">
+            <Link
+              href="/Herbicides"
+              className="bg-[#D2D7F1] w-44 h-56 sm:w-full sm:h-64 rounded-lg"
+            >
               <div className=" w-full justify-end items-end flex px-2.5 sm:px-10 py-3 text-2xl">
                 HERBICIDES
               </div>
@@ -28,7 +31,10 @@ export default function Categories() {
                 />
               </div>
             </Link>
-            <Link href={"/"} className="bg-[#9FD58C] h-56 w-48 sm:h-64 sm:w-full rounded-lg">
+            <Link
+              href={"/"}
+              className="bg-[#9FD58C] h-56 w-48 sm:h-64 sm:w-full rounded-lg"
+            >
               <div className="px-2.5 py-3 text-2xl ">INSECTICIDE</div>
               <div className="flex w-full justify-between gap-3 mix-blend-darken  h-fit ">
                 <Image
@@ -45,7 +51,10 @@ export default function Categories() {
             </Link>
           </div>
           <div className="sm:flex sm:gap-2 grid-cols-2 grid   mt-3">
-            <Link href={"/"} className="bg-[#D9D9D9] rounded-lg h-52 w-40 sm:h-60 sm:w-60 ">
+            <Link
+              href={"/"}
+              className="bg-[#D9D9D9] rounded-lg h-52 w-40 sm:h-60 sm:w-60 "
+            >
               <div className="px-10  py-2 text-2xl w-full">SEEDS</div>
               <Image
                 className=" mt-6 sm:mt-10 ml-4 sm:ml-10 w-40 h-32 mix-blend-darken"
@@ -53,7 +62,10 @@ export default function Categories() {
                 objectFit={true}
               />
             </Link>
-            <Link href={"/"} className="bg-[#F8D3C3] rounded-lg h-52  w-44 sm:w-60 sm:h-60">
+            <Link
+              href={"/"}
+              className="bg-[#F8D3C3] rounded-lg h-52  w-44 sm:w-60 sm:h-60"
+            >
               <div className="sm:px-10 px-4 py-2 text-2xl">FUNGICIDE</div>
               <Image
                 className="w-28 sm:w-32 h-32 sm:h-40 mt-2 sm:mt-5 ml-10 mix-blend-darken"
@@ -61,7 +73,10 @@ export default function Categories() {
                 objectFit={true}
               />
             </Link>
-            <Link href={"/"} className="bg-[#E0EF81] ml-20 mt-2 sm:mt-0 sm:ml-0 rounded-lg h-52 w-48 sm:h-60 sm:w-60 ">
+            <Link
+              href={"/"}
+              className="bg-[#E0EF81] ml-20 mt-2 sm:mt-0 sm:ml-0 rounded-lg h-52 w-48 sm:h-60 sm:w-60 "
+            >
               <div className="sm:px-3 py-2 px-2 text-2xl flex justify-center items-end">
                 GROWTH PROMOTERS
               </div>

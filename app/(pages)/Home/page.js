@@ -2,11 +2,11 @@ import farmer from "../assets/images/farmer3.jpg"
 import Image from "next/image";
 import Link from "next/link";
 
-export default function TopBrands() {
+export default function DashBoard() {
   return (
     <div className="flex justify-center mt-10">
          
-      <div className="font-medium font-serif drop-shadow-2xl flex flex-col gap-5 mt-10 ">
+      <div className="font-medium  font-serif drop-shadow-2xl flex flex-col gap-5 mt-10 ">
         <div className="text-3xl justify-between">
           “Most things, except agriculture, can wait.”
         </div>
@@ -24,8 +24,8 @@ export default function TopBrands() {
         </div>
         
       </div>
-      <div className="">
-        <Image className="w-96 h-64 " src={farmer} objectFit={true}/>
+      <div className="bg-black">
+        <Image className="w-72 h-72 sm:w-96 sm:h-64 " src={farmer} width={500} height={500} objectFit={true}/>
       </div>
      
     </div>
