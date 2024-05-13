@@ -24,7 +24,7 @@ export default function DashBoard() {
         </div>
         
       </div>
-      <div className="bg-black">
+      <div className="">
         <Image className="w-72 h-72 sm:w-96 sm:h-64 " src={farmer} width={500} height={500} objectFit={true}/>
       </div>
      
