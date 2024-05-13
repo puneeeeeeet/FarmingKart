@@ -1,7 +1,7 @@
 "use client";
 import { Icon } from "../icon";
 import { ArrowDown } from "../icons/arrowDown";
-import { Search } from "../icons/search";
+import { Kart } from "../icons/kart";
 import Link from "next/link";
 import Image from "next/image";
 import tractor from "../../(pages)/assets/images/tractor.jpeg";
@@ -15,28 +15,21 @@ export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <div className="bg-[#72B462]    flex flex-col">
+    <div className="bg-[#72B462]   flex flex-col">
       <div className="flex gap-2 items-center  justify-center text-white">
-        <Link href={"/"} className="  pr-10 mix-blend-darken	 ">
+        <Link href={"/"} className="  pr-10 mix-blend-darken	mb-1 ">
           <Image src={tractor} width="auto" height="60" alt="Logo" />
         </Link>
-        <div className="h-8 w-96 rounded-md ">
-          <div className="ml-2 mr-2 mt-0.5 gap-2 flex text-white items-center justify-center">
-            <input
-              className="bg-transparent w-full border-gray-300"
-              placeholder="Search your product here!"
-            ></input>
-            <button className=" mb-2">
-              <Icon icon={Search} size="small" />
-            </button>
-          </div>
-        </div>
-        {/* <button className=" ml-5">
-          <Icon icon={WishList} size="medium" />
-        </button> */}
-        {/* <button className="ml-2">
+        
+        <div className="flex">
+        <p className="  w-20  items-center justify-center flex ">
+          Shop Now
+        </p>
+        <Link href={"/"} className="">
           <Icon icon={Kart} size="large" />
-        </button> */}
+        </Link> 
+        </div>
+        
         <div className="flex items-center gap-2 ml-5">
           
           <div>
@@ -44,7 +37,7 @@ export default function Nav() {
         </div>
       </div>
 
-      <div className=" bg-[#549744] h-10 flex justify-center	font-bold items-center gap-6 text-white">
+      <div className=" bg-[#549744] h-10 flex justify-center	font-bold items-center gap-1 text-white">
         <Link
           href={"/Home"}
           className={pathname == "/Home" ? activeLink : inactiveLink}
@@ -68,8 +61,8 @@ export default function Nav() {
           <Icon icon={ArrowDown} size="medium" />
         </Link> */}
         <Link
-          href={"/Products"}
-          className={pathname == "/Products" ? activeLink : inactiveLink}
+          href={"/About"}
+          className={pathname == "/About" ? activeLink : inactiveLink}
         >
           About
         </Link>
