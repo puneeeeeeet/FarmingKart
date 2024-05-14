@@ -9,8 +9,9 @@ import growthPromo from "../assets/images/growthPromo.png";
 
 export default function Categories() {
   return (
-    <div className="mt-6 h-full w-full flex  flex-col gap-2 items-center justify-center">
-      <div className="text-3xl font-medium font-serif drop-shadow-2xl">
+    <div className=" h-full bg-[#F4E5E5] sm:bg-white w-full sm:justify-center sm:items-center flex  flex-col gap-2">
+
+      <div className="text-2xl ml-2 mt-6 sm:text-3xl font-medium font-serif drop-shadow-2xl">
         SHOP BY CATEGORIES
       </div>
       <div className="bg-[#F4E5E5] h-full w-full sm:w-fit sm:h-fit mt-4 rounded-lg">
@@ -18,12 +19,12 @@ export default function Categories() {
           <div className="flex gap-3 ">
             <Link
               href="/Herbicides"
-              className="bg-[#D2D7F1] w-44 h-56 sm:w-full sm:h-64 rounded-lg"
+              className="bg-[#D2D7F1] w-40 h-52 sm:w-full sm:h-64 rounded-lg"
             >
               <div className=" w-full justify-end items-end flex px-2.5 sm:px-10 py-3 text-2xl">
                 HERBICIDES
               </div>
-              <div className="w-64 h-60 mt-5">
+              <div className=" mt-5">
                 <Image
                   className="w-40 h-28 sm:w-64 sm:h-48 mix-blend-darken"
                   src={spray2}
@@ -33,12 +34,12 @@ export default function Categories() {
             </Link>
             <Link
               href={"/"}
-              className="bg-[#9FD58C] h-56 w-48 sm:h-64 sm:w-full rounded-lg"
+              className="bg-[#9FD58C] h-52 w-48 sm:h-64 sm:w-full rounded-lg"
             >
               <div className="px-2.5 py-3 text-2xl ">INSECTICIDE</div>
               <div className="flex w-full justify-between gap-3 mix-blend-darken  h-fit ">
                 <Image
-                  className="mt-12 w-36 h-28 sm:w-44 sm:h-32"
+                  className="mt-8 w-36 h-28 sm:w-44 sm:h-32"
                   src={insecticide0}
                   objectFit="true"
                 />
