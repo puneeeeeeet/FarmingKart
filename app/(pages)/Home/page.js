@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function DashBoard() {
   return (
-    <div className="sm:flex justify-center mt-10  itmes-center px-10 ">
+    <div className="sm:flex justify-center sm:mt-10 mt-2  itmes-center px-10 ">
          <div className="">
         <Image className="w-72 h-72 sm:w-0 sm:h-0 " src={farmer} width={500} height={500} objectFit={true}/>
       </div>
