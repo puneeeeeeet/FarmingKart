@@ -51,7 +51,7 @@ export default function Categories() {
               </div>
             </Link>
           </div>
-          <div className="sm:flex sm:gap-2 grid-cols-2 grid   mt-3">
+          <div className="sm:flex sm:gap-2 gap-*  grid-cols-2 grid   mt-3">
             <Link
               href={"/"}
               className="bg-[#D9D9D9] rounded-lg h-52 w-40 sm:h-60 sm:w-60 "
@@ -65,7 +65,7 @@ export default function Categories() {
             </Link>
             <Link
               href={"/"}
-              className="bg-[#F8D3C3] rounded-lg h-52  w-48 sm:w-60 sm:h-60"
+              className="bg-[#F8D3C3] rounded-lg h-52  w-44 sm:w-60 sm:h-60"
             >
               <div className="sm:px-10 px-4 py-2 text-2xl">FUNGICIDE</div>
               <Image
@@ -76,7 +76,7 @@ export default function Categories() {
             </Link>
             <Link
               href={"/"}
-              className="bg-[#E0EF81] ml-20 mt-2 sm:mt-0 sm:ml-0 rounded-lg h-52 w-48 sm:h-60 sm:w-60 "
+              className="bg-[#E0EF81] ml-20 mt-2 sm:mt-0 sm:ml-0 rounded-lg h-52 w-44 sm:h-60 sm:w-60 "
             >
               <div className="sm:px-3 py-2 px-2 text-2xl flex justify-center items-end">
                 GROWTH PROMOTERS
