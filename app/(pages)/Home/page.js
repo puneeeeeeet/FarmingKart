@@ -6,7 +6,7 @@ export default function DashBoard() {
   return (
     <div className="sm:flex justify-center sm:mt-10 mt-2  itmes-center px-10 ">
          <div className="">
-        <Image className="w-72 h-72 sm:w-0 sm:h-0 " src={farmer} width={500} height={500} objectFit={true}/>
+        <Image className="w-60 h-60 sm:w-0 sm:h-0 " src={farmer} width={500} height={500} objectFit={true}/>
       </div>
       <div className="font-medium  font-serif drop-shadow-2xl flex flex-col gap-5 mt-10 ">
         <div className="text-3xl justify-between">
