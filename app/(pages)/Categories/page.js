@@ -34,7 +34,7 @@ export default function Categories() {
             </Link>
             <Link
               href={"/"}
-              className="bg-[#9FD58C] h-52 w-48 sm:h-64 sm:w-full rounded-lg"
+              className="bg-[#9FD58C] h-52 w-44 sm:h-64 sm:w-full rounded-lg"
             >
               <div className="px-2.5 py-3 text-2xl ">INSECTICIDE</div>
               <div className="flex w-full justify-between gap-3 mix-blend-darken  h-fit ">
