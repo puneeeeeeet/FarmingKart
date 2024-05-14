@@ -65,7 +65,7 @@ export default function Categories() {
             </Link>
             <Link
               href={"/"}
-              className="bg-[#F8D3C3] rounded-lg h-52  w-44 sm:w-60 sm:h-60"
+              className="bg-[#F8D3C3] rounded-lg h-52  w-48 sm:w-60 sm:h-60"
             >
               <div className="sm:px-10 px-4 py-2 text-2xl">FUNGICIDE</div>
               <Image
