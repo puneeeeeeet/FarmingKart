@@ -18,14 +18,10 @@ export default function Nav() {
   return (
     <div className="bg-[#72B462]  justify-center items-center flex flex-col">
       <div className="  gap-3 flex text-white">
-        {/* <div className="bg-black  "> */}
         <Link href={"/"} className=" px-2 gap-x-1 font-mono py-0.5 rounded-full items-center justify-center flex text-2xl font-bold 	mb-1 ">
           <Image className="rounded-md" src={Kisaan24_logo} width="auto" height="40" alt="Logo" />
          <div>KISAAN24</div> 
         </Link>
-        {/* </div> */}
-        
-        
         <div className="flex py-1">
         <p className="  w-36 sm:w-60  ">
           
@@ -34,12 +30,6 @@ export default function Nav() {
           <Icon icon={Kart} size="large" />
         </Link> 
         </div>
-        
-        {/* <div className="flex items-center gap-2 ml-5">
-          
-          <div>
-          </div>
-        </div> */}
       </div>
 
       <div className=" bg-[#549744] w-full h-10 flex justify-center	 font-medium sm:font-bold items-center gap-1 sm:gap-10 text-white">
@@ -57,14 +47,6 @@ export default function Nav() {
           Categories
           <Icon icon={ArrowDown} size="medium" />
         </Link>
-
-        {/* <Link
-          href={"/TopBrands"}
-          className={pathname == "/TopBrands" ? activeLink : inactiveLink}
-        >
-          Top Brands
-          <Icon icon={ArrowDown} size="medium" />
-        </Link> */}
         <Link
           href={"/About"}
           className={pathname == "/About" ? activeLink : inactiveLink}

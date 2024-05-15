@@ -8,11 +8,11 @@ export default function ContactUs(){
             </div>
             <div className="sm:mx-28">
             <p className="mx-5 font-medium text-l text-justify">
-            We're here to help you with any questions, 
+            We&apos;re here to help you with any questions, 
             concerns, or inquiries you may have. Whether 
             you need assistance with placing an order, have
              a product-related question, or just want to say 
-             hello, we're always happy to hear from you. Reach 
+             hello, we&apos;re always happy to hear from you. Reach 
              out to us via phone, email, or through the contact 
              form below, and one of our friendly team members 
              will get back to you as soon as possible.
