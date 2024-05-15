@@ -19,7 +19,7 @@ export default function Nav() {
     <div className="bg-[#72B462]  justify-center items-center flex flex-col">
       <div className="  gap-3 flex text-white">
         {/* <div className="bg-black  "> */}
-        <Link href={"/"} className=" px-2 gap-x-1 py-0.5 rounded-full items-center justify-center flex text-2xl font-bold 	mb-1 ">
+        <Link href={"/"} className=" px-2 gap-x-1 font-mono py-0.5 rounded-full items-center justify-center flex text-2xl font-bold 	mb-1 ">
           <Image className="rounded-md" src={Kisaan24_logo} width="auto" height="40" alt="Logo" />
          <div>KISAAN24</div> 
         </Link>

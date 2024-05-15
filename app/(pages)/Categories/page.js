@@ -33,7 +33,7 @@ export default function Categories() {
               </div>
             </Link>
             <Link
-              href={"/"}
+              href={"/Insecticide"}
               className="bg-[#9FD58C] h-52 w-44 sm:h-64 sm:w-full rounded-lg"
             >
               <div className="px-2.5 py-3 text-2xl ">INSECTICIDE</div>
@@ -53,7 +53,7 @@ export default function Categories() {
           </div>
           <div className="sm:flex sm:gap-2 gap-*  grid-cols-2 grid   mt-3">
             <Link
-              href={"/"}
+              href={"/Seeds"}
               className="bg-[#D9D9D9] rounded-lg h-52 w-40 sm:h-60 sm:w-60 "
             >
               <div className="px-10  py-2 text-2xl w-full">SEEDS</div>
@@ -64,7 +64,7 @@ export default function Categories() {
               />
             </Link>
             <Link
-              href={"/"}
+              href={"/Fungicide"}
               className="bg-[#F8D3C3] rounded-lg h-52  w-44 sm:w-60 sm:h-60"
             >
               <div className="sm:px-10 px-4 py-2 text-2xl">FUNGICIDE</div>
@@ -75,7 +75,7 @@ export default function Categories() {
               />
             </Link>
             <Link
-              href={"/"}
+              href={"/GrowthPromo"}
               className="bg-[#E0EF81] ml-20 mt-2 sm:mt-0 sm:ml-0 rounded-lg h-52 w-44 sm:h-60 sm:w-60 "
             >
               <div className="sm:px-3 py-2 px-2 text-2xl flex justify-center items-end">

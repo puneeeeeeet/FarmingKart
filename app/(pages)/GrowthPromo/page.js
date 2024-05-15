@@ -19,7 +19,7 @@ async function fetchDataFromFirestore() {
 
   
 
-export default function Herbicides() {
+export default function GrowthPromo() {
   const [productData, setProductData] = useState([]);
 
   useEffect(() => {

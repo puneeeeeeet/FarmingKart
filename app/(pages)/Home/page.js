@@ -16,10 +16,10 @@ export default function DashBoard() {
             –Jawaharlal Nehru.
         </div>
         <div className="gap-3 flex sm:mt-10  text-white text-xl">
-            <Link href='/Categories' className="bg-[#FFB72C] hover:bg-white w-28 flex rounded-lg items-center justify-center">
+            <Link href='/Categories' className="bg-[#FFB72C] hover:bg-[#fcd34d] w-28 flex rounded-lg items-center justify-center">
             Explore!
         </Link>
-        <Link href='/ContactUs' className="bg-[#72B462] w-36 rounded-lg flex items-center justify-center">
+        <Link href='/ContactUs' className="bg-[#72B462] hover:bg-[#549744] w-36 rounded-lg flex items-center justify-center">
             Contact Us
         </Link>
 
