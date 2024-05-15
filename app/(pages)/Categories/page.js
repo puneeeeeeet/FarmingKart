@@ -15,7 +15,7 @@ export default function Categories() {
         SHOP BY CATEGORIES
       </div>
       <div className="bg-[#F4E5E5] h-full w-full sm:w-fit sm:h-fit mt-4 rounded-lg">
-        <div className="m-3 ">
+        <div className="m-2 sm:m-3 ">
           <div className="flex gap-3 ">
             <Link
               href="/Herbicides"
@@ -34,7 +34,7 @@ export default function Categories() {
             </Link>
             <Link
               href={"/Insecticide"}
-              className="bg-[#9FD58C] h-52 w-44 sm:h-64 sm:w-full rounded-lg"
+              className="bg-[#9FD58C] h-52 w-44 sm:h-64 ml-2 sm:ml-0 sm:w-full rounded-lg"
             >
               <div className="px-2.5 py-3 text-2xl ">INSECTICIDE</div>
               <div className="flex w-full justify-between gap-3 mix-blend-darken  h-fit ">
@@ -51,7 +51,7 @@ export default function Categories() {
               </div>
             </Link>
           </div>
-          <div className="sm:flex sm:gap-2 gap-*  grid-cols-2 grid   mt-3">
+          <div className="sm:flex sm:gap-2   grid-cols-2 grid   mt-3">
             <Link
               href={"/Seeds"}
               className="bg-[#D9D9D9] rounded-lg h-52 w-40 sm:h-60 sm:w-60 "
