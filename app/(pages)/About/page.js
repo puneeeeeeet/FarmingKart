@@ -19,7 +19,7 @@ export default function About(){
               we tirelessly source the finest products from trusted suppliers and
                manufacturers, ensuring that every item in our inventory meets our 
                stringent standards for effectiveness, safety, and environmental 
-               responsibility.
+               responsibility. 
                <Link href={'/ContactUs'} className="font-bold hover:bg-gray-300">Contact us</Link>
             </p>
             
