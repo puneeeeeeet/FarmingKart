@@ -17,8 +17,6 @@ async function fetchDataFromFirestore() {
   return data;
 }
 
-  
-
 export default function GrowthPromo() {
   const [productData, setProductData] = useState([]);
 
@@ -30,12 +28,15 @@ export default function GrowthPromo() {
     fetchData();
   }, []);
  
+  const growthPromoter = productData.filter((product)=>product.category=="Growth promoter");
+  console.log(growthPromoter);
+
   const [showModal,setShowModal] = useState(false);
   
   return (
     <div>
       <div className=" mt-3  grid grid-cols-2 sm:grid-cols-7 gap-2 ">
-        {productData.map((product) => (
+        {growthPromoter.map((product) => (
 
              
           <div 

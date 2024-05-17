@@ -29,13 +29,14 @@ export default function Fungicide() {
     }
     fetchData();
   }, []);
- 
+  const fungicideFilter = productData.filter((product)=>product.category=="Fungicide");
+
   const [showModal,setShowModal] = useState(false);
   
   return (
     <div>
       <div className=" mt-3  grid grid-cols-2 sm:grid-cols-7 gap-2 ">
-        {productData.map((product) => (
+        {fungicideFilter.map((product) => (
 
              
           <div 

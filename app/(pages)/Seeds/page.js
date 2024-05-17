@@ -29,13 +29,13 @@ export default function Seeds() {
     }
     fetchData();
   }, []);
- 
+  const seedsFilter = productData.filter((product)=>product.category=="Seeds");
   const [showModal,setShowModal] = useState(false);
   
   return (
     <div>
       <div className=" mt-3  grid grid-cols-2 sm:grid-cols-7 gap-2 ">
-        {productData.map((product) => (
+        {seedsFilter.map((product) => (
 
              
           <div 
