@@ -80,7 +80,7 @@ export default function Insecticide() {
                    <div className="text-xl font-semibold px-2 " >
                  Download the App from playstore!
                   </div> 
-                  <Link href={"/"} 
+                  <Link href={"https://play.google.com/store/apps/details?id=com.scompany.kisaan24&hl=en_IN"} 
                   className="bg-[#fbbf24] px-2 text-black text-xl rounded-md">
                   Download
                   </Link>

@@ -26,7 +26,7 @@ export default function Nav() {
         <p className="  w-36 sm:w-60  ">
           
         </p>
-        <Link href={"/"} className="mr-2 ">
+        <Link href={"https://play.google.com/store/apps/details?id=com.scompany.kisaan24&hl=en_IN"} className="mr-2 ">
           <Icon icon={Kart} size="large" />
         </Link> 
         </div>
