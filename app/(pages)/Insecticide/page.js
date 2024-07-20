@@ -59,7 +59,7 @@ export default function Insecticide() {
             
             </div>
             <div className="flex gap-2 ">
-            <p className="font-medium ">₹{product.price}</p>
+            <p className="font-medium ">₹{product.salePrice}</p>
             <button
               // href="https://www.linkedin.com/in/puneet-chhabra-3089b621b/"
               className="bg-[#fbbf24] px-1 rounded-md"

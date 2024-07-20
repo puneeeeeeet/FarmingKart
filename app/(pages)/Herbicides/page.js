@@ -51,7 +51,7 @@ export default function Herbicides() {
             <p className="font-bold">{pro.category}</p>
           </div>
           <div className="flex gap-2 ">
-            <p className="font-medium ">₹{pro.price}</p>
+            <p className="font-medium ">₹{pro.salePrice}</p>
             <button className="bg-[#fbbf24] px-1 rounded-md">
               Add to cart
             </button>
